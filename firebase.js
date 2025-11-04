@@ -1,16 +1,21 @@
+/ Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBIdmpTRMov2LdgF2r_QJwBrBCTrfKw5wE",
+  authDomain: "pinglo-42acc.firebaseapp.com",
+  projectId: "pinglo-42acc",
+  storageBucket: "pinglo-42acc.firebasestorage.app",
+  messagingSenderId: "45459761010",
+  appId: "1:45459761010:web:5161f602772ce752a31feb",
+  measurementId: "G-M4NGH1G73B"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+const analytics = getAnalytics(app);
